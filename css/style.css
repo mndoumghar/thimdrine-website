@@ -48,6 +48,7 @@ ul {
 }
 
 
+
 .nav-list {
     background-color: var(--gray-150);
     min-height: 50px;
@@ -56,7 +57,33 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem 6rem;
+    position: relative;
+
 }
+
+.nav-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+
+@media (max-width: 1000px) {
+    .nav-logo {
+        position: static;
+        transform: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 .nav-list a.active {
     font-weight: bold;
