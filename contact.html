@@ -29,21 +29,101 @@
 
         <section class="contact">
 
-            <form class="contact-form" action="mailto:thmdrinsupport@gmail.com" method="post" enctype="text/plain">
-                <div>
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" required>
-                </div>
-                <div>
-                    <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone">
-                </div>
-                <div>
-                    <label for="message">Votre message ou commande de produit</label>
-                    <textarea id="message" name="message" rows="6" maxlength= "120" required></textarea>
-                </div>
-                <button class="btn" type="submit">Envoyer</button>
-            </form>
+          
+<form class="contact-form" action="mailto:thmdrinsupport@gmail.com" method="post" enctype="text/plain">
+
+    <div>
+        <label for="nom">Nom complet</label>
+        <input
+            type="text"
+            id="nom"
+            name="nom"
+            minlength="2"
+            maxlength="80"
+            required
+        >
+    </div>
+
+    <div>
+        <label for="email">Adresse e-mail</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+        >
+    </div>
+
+    <div>
+        <label for="telephone">Téléphone</label>
+        <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            pattern="(?:0[5-7][0-9]{8}|\+212[5-7][0-9]{8})"
+            title="Exemple : 0612345678 ou +212612345678"
+            autocomplete="tel"
+            required
+        >
+    </div>
+
+    <div>
+        <label for="produit">Produit souhaité</label>
+        <select id="produit" name="produit" required>
+            <option value="" selected disabled>
+                Choisissez un produit
+            </option>
+            <option value="miel-de-thym">Miel de thym</option>
+            <option value="huile-olive">Huile d'olive</option>
+            <option value="confiture-figue-barbarie">
+                Confiture de figue de barbarie
+            </option>
+        </select>
+    </div>
+
+    <div>
+        <label for="quantite">Quantité souhaitée</label>
+        <input
+            type="number"
+            id="quantite"
+            name="quantite"
+            min="1"
+            step="1"
+            required
+        >
+    </div>
+
+    <div>
+        <label for="message">Votre message</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            minlength="10"
+            maxlength="1000"
+            required
+        ></textarea>
+    </div>
+
+    <div class="consent-field">
+        <input
+            type="checkbox"
+            id="consentement"
+            name="consentement"
+            value="oui"
+            required
+        >
+        <label for="consentement">
+            J'accepte que mes informations soient utilisées
+            pour traiter ma demande.
+        </label>
+    </div>
+
+    <button class="btn" type="submit">Envoyer ma demande</button>
+
+</form>
+
 
             <div class="contact-info">
                 <h2>Nos coordonnées</h2>

@@ -348,7 +348,8 @@ ul {
 }
 
 
-.contact-form input,
+.contact-form input:not([type="checkbox"]),
+.contact-form select,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
@@ -357,8 +358,8 @@ ul {
     background-color: var(--gray-100);
     font-family: inherit;
     font-size: 16px;
-    resize: none;
 }
+
 
 .contact-form .btn {
     margin: 0;
