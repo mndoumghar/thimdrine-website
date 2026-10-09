@@ -1,14 +1,13 @@
-
- :root {
-    --gray-100: #FFFBFB;
-    --gray-150: #D9D9D9;
-    --gray-500: #BEBABA;
-    --gray-600: #827979;
-    --gray-800: #3A3A3A;
-    --white: #FFFFFF;
-    --text-light: #AAAAAA;
+:root {
+    --gray-100: #FAF7EF;
+    --gray-150: #EEE7D5;
+    --gray-500: #c9d7ae;
+    --gray-600: #96681A;
+    --gray-800: #304229;
+    --white: #FFFDF8;
+    --text-light: #D9DED2;
     --radius: 10px;
-} 
+}
 
 
 * {
@@ -23,6 +22,14 @@ body {
     background-color: var(--gray-100);
     color: var(--gray-800);
 }
+
+
+header {
+    position: sticky;
+    top: 0;
+
+}
+
 
 img {
     display: block;
